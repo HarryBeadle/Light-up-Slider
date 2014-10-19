@@ -11,11 +11,9 @@ void setup() {
 }
 
 int Lights = 0;
-int Read = 0;
 
 void loop() {
-  Read = analogRead(A0);
-  Lights = map(Read, 0, 1023, 1, 7);
+  Lights = map(analogRead(A0), 0, 1023, 1, 7);
   for (int i = 2; i <= Lights; i++) {
     digitalWrite(i, HIGH);
   }
