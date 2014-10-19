@@ -10,14 +10,22 @@ void setup() {
   pinMode(A0, INPUT);
 }
 
+<<<<<<< HEAD
 int Lights = 0;
 
 void loop() {
   Lights = map(analogRead(A0), 0, 1023, 1, 7);
   for (int i = 2; i <= Lights; i++) {
+=======
+int Input = 0;
+
+void loop() {
+  Input = map(analogRead(A0), 0, 1023, 1, 7);
+  for (int i = 2; i <= Input; i++) {
+>>>>>>> FETCH_HEAD
     digitalWrite(i, HIGH);
   }
-  for (int i = 7; i > Lights; i--) {
+  for (int i = 7; i > Input; i--) {
     digitalWrite(i, LOW);
   }
 }
